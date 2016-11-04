@@ -1,0 +1,1441 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>op_rabbit - com.spingo.op_rabbit</title>
+          <meta name="description" content="op rabbit - com.spingo.op rabbit" />
+          <meta name="keywords" content="op rabbit com.spingo.op rabbit" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'com.spingo.op_rabbit.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.spingo">spingo</a></p>
+        <h1>op_rabbit</h1><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">op_rabbit</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.spingo.op_rabbit"><span>op_rabbit</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.spingo.op_rabbit.AirbrakeLogger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AirbrakeLoggerextendsRabbitErrorLogging"></a>
+      <a id="AirbrakeLogger:AirbrakeLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AirbrakeLogger.html"><span class="name">AirbrakeLogger</span></a><span class="result"> extends <a href="RabbitErrorLogging.html" class="extype" name="com.spingo.op_rabbit.RabbitErrorLogging">RabbitErrorLogging</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@AirbrakeLoggerextendsRabbitErrorLogging" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  To use this package, you must add <code>'op-rabbit-airbrake'</code> to your dependencies.</p><div class="fullcomment"><div class="comment cmt"><h4> BATTERIES NOT INCLUDED </h4><p>  To use this package, you must add <code>'op-rabbit-airbrake'</code> to your dependencies.</p><h4> Overview </h4><p>  Instantiates a new <a href="RabbitErrorLogging.html" class="extype" name="com.spingo.op_rabbit.RabbitErrorLogging">RabbitErrorLogging</a> strategy that reports exceptions, along with message and message headers, to <a href="https://airbrake.io" target="_blank">Airbrake</a>.</p><h5> Instantiating from config </h5><p>  Call the convenience lazy-getter <a href="AirbrakeLogger$.html#fromConfig:com.spingo.op_rabbit.AirbrakeLogger" class="extmbr" name="com.spingo.op_rabbit.AirbrakeLogger#fromConfig">AirBrake.fromConfig</a> to get a <a href="AirbrakeLogger.html" class="extype" name="com.spingo.op_rabbit.AirbrakeLogger">AirbrakeLogger</a> initialize from
+  application configuration, which should be formatted as follows:</p><pre>airbrake {
+  app-name = <span class="lit">"my-awesome-app"</span>
+  key = <span class="lit">"deadbeefdeadbeefdeadbeefdeadbeef"</span>
+  environment = <span class="lit">"production"</span>
+}</pre></div></div>
+    </li><li name="com.spingo.op_rabbit.Binding" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BindingextendsBinding.QueueDefinition[com.spingo.op_rabbit.Binding.Abstract]withBinding.ExchangeDefinition[com.spingo.op_rabbit.Binding.Abstract]"></a>
+      <a id="Binding:Binding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Binding.html"><span class="name">Binding</span></a><span class="result"> extends <a href="Binding$$QueueDefinition.html" class="extype" name="com.spingo.op_rabbit.Binding.QueueDefinition">QueueDefinition</a>[<a href="Binding$$Abstract.html" class="extype" name="com.spingo.op_rabbit.Binding.Abstract">Abstract</a>] with <a href="Binding$$ExchangeDefinition.html" class="extype" name="com.spingo.op_rabbit.Binding.ExchangeDefinition">ExchangeDefinition</a>[<a href="Binding$$Abstract.html" class="extype" name="com.spingo.op_rabbit.Binding.Abstract">Abstract</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@BindingextendsBinding.QueueDefinition[com.spingo.op_rabbit.Binding.Abstract]withBinding.ExchangeDefinition[com.spingo.op_rabbit.Binding.Abstract]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.ConnectionParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ConnectionParamsextendsProductwithSerializable"></a>
+      <a id="ConnectionParams:ConnectionParams"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ConnectionParams.html"><span class="name">ConnectionParams</span></a><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.rabbitmq.client.Address">Address</span>] = <span class="defval" name='<span class="name"><a href="../../package.html">Seq(new Address(ConnectionFactory.DEFAULT_HOST, ConnectionFactory.DEFAULT_AMQP_PORT))</a></span>'>...</span></span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../package.html">ConnectionFactory.DEFAULT_USER</a></span></span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../package.html">ConnectionFactory.DEFAULT_PASS</a></span></span></span>, <span name="virtualHost">virtualHost: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../package.html">ConnectionFactory.DEFAULT_VHOST</a></span></span></span>, <span name="ssl">ssl: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="clientProperties">clientProperties: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>] = <span class="symbol">Map.empty[String, Object]</span></span>, <span name="connectionTimeout">connectionTimeout: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">10000</span></span>, <span name="exceptionHandler">exceptionHandler: <span class="extype" name="com.rabbitmq.client.ExceptionHandler">ExceptionHandler</span> = <span class="symbol"><span class="name"><a href="../../package.html">new DefaultExceptionHandler()</a></span></span></span>, <span name="requestedChannelMax">requestedChannelMax: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="../../package.html">ConnectionFactory.DEFAULT_CHANNEL_MAX</a></span>'>...</span></span>, <span name="requestedFrameMax">requestedFrameMax: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="../../package.html">ConnectionFactory.DEFAULT_FRAME_MAX</a></span></span></span>, <span name="requestedHeartbeat">requestedHeartbeat: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="../../package.html">ConnectionFactory.DEFAULT_HEARTBEAT</a></span></span></span>, <span name="saslConfig">saslConfig: <span class="extype" name="com.rabbitmq.client.SaslConfig">SaslConfig</span> = <span class="symbol"><span class="name"><a href="../../package.html">DefaultSaslConfig.PLAIN</a></span></span></span>, <span name="sharedExecutor">sharedExecutor: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.util.concurrent.ExecutorService">ExecutorService</span>] = <span class="symbol">None</span></span>, <span name="shutdownTimeout">shutdownTimeout: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="../../package.html">ConnectionFactory.DEFAULT_SHUTDOWN_TIMEOUT</a></span>'>...</span></span>, <span name="socketFactory">socketFactory: <span class="extype" name="javax.net.SocketFactory">SocketFactory</span> = <span class="symbol">SocketFactory.getDefault()</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@ConnectionParamsextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Because topology recovery strategy configuration is crucial to how op-rabbit works, we don't allow some options to
+be specified</p><div class="fullcomment"><div class="comment cmt"><p>Because topology recovery strategy configuration is crucial to how op-rabbit works, we don't allow some options to
+be specified</p><p>Modeling the allowed options via a case-class allows the compiler to tell the library user which options aren't
+allowed.
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.Delivery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeliveryextendsProductwithSerializable"></a>
+      <a id="Delivery:Delivery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Delivery.html"><span class="name">Delivery</span></a><span class="params">(<span name="consumerTag">consumerTag: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="envelope">envelope: <span class="extype" name="com.rabbitmq.client.Envelope">Envelope</span></span>, <span name="properties">properties: <span class="extype" name="com.rabbitmq.client.AMQP.BasicProperties">BasicProperties</span></span>, <span name="body">body: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@DeliveryextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Represents a message delivery for usage in consumers / Handlers.</p>
+    </li><li name="com.spingo.op_rabbit.Deserialized" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Deserialized[T]=Either[com.spingo.op_rabbit.Rejection.ExtractRejection,T]"></a>
+      <a id="Deserialized[T]:Deserialized[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Deserialized</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <span class="extype" name="scala.util.Either">Either</span>[<a href="Rejection$$ExtractRejection.html" class="extype" name="com.spingo.op_rabbit.Rejection.ExtractRejection">ExtractRejection</a>, <span class="extype" name="com.spingo.op_rabbit.Deserialized.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Deserialized[T]=Either[com.spingo.op_rabbit.Rejection.ExtractRejection,T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Deserializer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Deserializer[A,B]extendsA=&gt;com.spingo.op_rabbit.Deserialized[B]"></a>
+      <a id="Deserializer[A,B]:Deserializer[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Deserializer.html"><span class="name">Deserializer</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends (<span class="extype" name="com.spingo.op_rabbit.Deserializer.A">A</span>) ⇒ <a href="#Deserialized[T]=Either[com.spingo.op_rabbit.Rejection.ExtractRejection,T]" class="extmbr" name="com.spingo.op_rabbit.Deserialized">Deserialized</a>[<span class="extype" name="com.spingo.op_rabbit.Deserializer.B">B</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Deserializer[A,B]extendsA=&gt;com.spingo.op_rabbit.Deserialized[B]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Directive" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Directive[+L&lt;:shapeless.HList]extendsAnyRef"></a>
+      <a id="Directive[+L&lt;:HList]:Directive[L]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Directive.html"><span class="name">Directive</span></a><span class="tparams">[<span name="L">+L &lt;: <span class="extype" name="shapeless.HList">HList</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Directive[+L&lt;:shapeless.HList]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Directive1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Directive1[T]=com.spingo.op_rabbit.Directive[shapeless.::[T,shapeless.HNil]]"></a>
+      <a id="Directive1[T]:Directive1[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Directive1</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> = <a href="Directive.html" class="extype" name="com.spingo.op_rabbit.Directive">Directive</a>[<span class="extype" name="shapeless.::">::</span>[<span class="extype" name="com.spingo.op_rabbit.Directive1.T">T</span>, <span class="extype" name="shapeless.HNil">HNil</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Directive1[T]=com.spingo.op_rabbit.Directive[shapeless.::[T,shapeless.HNil]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Directives" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DirectivesextendsAnyRef"></a>
+      <a id="Directives:Directives"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Directives.html"><span class="name">Directives</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@DirectivesextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Directives power the declarative DSL of op-rabbit.</p><div class="fullcomment"><div class="comment cmt"><p>  Directives power the declarative DSL of op-rabbit.</p><p>  In order to define a consumer, you need a <a href="Directives$.html#channel(qos:Int):com.spingo.op_rabbit.ChannelDirective" class="extmbr" name="com.spingo.op_rabbit.Directives#channel">channel</a> directive, a <a href="Directives$.html#consume(binding:com.spingo.op_rabbit.Binding.QueueDefinition[com.spingo.op_rabbit.Binding.Concreteness],args:Seq[com.spingo.op_rabbit.properties.Header],consumerTagPrefix:Option[String]):com.spingo.op_rabbit.BindingDirective" class="extmbr" name="com.spingo.op_rabbit.Directives#consume">consumer</a> directive, and one or more extractor directives. For example:</p><pre>channel(qos = <span class="num">3</span>) {
+  consume(queue(<span class="lit">"my.queue.name"</span>)) {
+    (body(as[MyPayloadType]) &amp; optionalProperty(ReplyTo) &amp; optionalProperty(Priority)) { (myPayload, replyTo, priority) <span class="kw">=&gt;</span>
+      <span class="cmt">// work ...</span>
+      ack
+    }
+  }
+}</pre><p>  As seen, directives are composable via <code>&amp;</code>. In the end, the directive is applied with a function whose parameters match the output values from the directive(s).</p><p>  One value of the directives, as opposed to accessing the AMQP properties directly, is that they are type safe, and care was taken to reduce the probability of surprise. Death is swiftly issued to <code>null</code> and <code>Object</code>. Some directives, such as <a href="Directives$.html#property[T](extractor:com.spingo.op_rabbit.properties.PropertyExtractor[T]):com.spingo.op_rabbit.Directive1[T]" class="extmbr" name="com.spingo.op_rabbit.Directives#property">property</a>, will nack the message if the value specified can't be extracted; IE it is null. If you'd prefer to use a default value instead of nacking the message, you can specify alternative values using <code>| provide(...)</code>.</p><pre>(property(ReplyTo) | provide(<span class="lit">"default-reply-to"</span>) { replyTo <span class="kw">=&gt;</span>
+  <span class="cmt">// ...</span>
+}</pre><p>  Note: the directives themselves don't actually do anything, except when applied / returned. IE:</p><pre>channel(qos = <span class="num">3</span>) {
+  consume(queue(<span class="lit">"my.queue.name"</span>)) {
+    property(ReplyTo) <span class="cmt">// does absolutely nothing</span>
+
+    body(as[MyPayloadType]) { (myPayload, replyTo, priority) <span class="kw">=&gt;</span>
+      ack <span class="cmt">// this ack here does absolutely nothing (not the return value)</span>
+      <span class="cmt">// work ...</span>
+      ack
+    }
+  }
+}</pre></div></div>
+    </li><li name="com.spingo.op_rabbit.Exchange" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Exchange[+T&lt;:com.spingo.op_rabbit.Exchange.Value]extendsBinding.ExchangeDefinition[com.spingo.op_rabbit.Binding.Concrete]"></a>
+      <a id="Exchange[+T&lt;:op_rabbit.Exchange.Value]:Exchange[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Exchange.html"><span class="name">Exchange</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="Exchange$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="com.spingo.op_rabbit.Exchange.Value">op_rabbit.Exchange.Value</a></span>]</span><span class="result"> extends <a href="Binding$$ExchangeDefinition.html" class="extype" name="com.spingo.op_rabbit.Binding.ExchangeDefinition">ExchangeDefinition</a>[<a href="Binding$$Concrete.html" class="extype" name="com.spingo.op_rabbit.Binding.Concrete">Concrete</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Exchange[+T&lt;:com.spingo.op_rabbit.Exchange.Value]extendsBinding.ExchangeDefinition[com.spingo.op_rabbit.Binding.Concrete]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Common interface for how exchanges are defined.</p><div class="fullcomment"><div class="comment cmt"><p>  Common interface for how exchanges are defined.</p><p>  See:</p><ul><li><a href="Exchange$.html" class="extype" name="com.spingo.op_rabbit.Exchange">Exchange object</a> for various factory definitions.</li><li><a href="Exchange$$ModeledArgs$.html" class="extype" name="com.spingo.op_rabbit.Exchange.ModeledArgs">Exchange.ModeledArgs</a>
+</li></ul></div></div>
+    </li><li name="com.spingo.op_rabbit.GenericMarshallingException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GenericMarshallingExceptionextendsMarshallingExceptionwithProductwithSerializable"></a>
+      <a id="GenericMarshallingException:GenericMarshallingException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GenericMarshallingException.html"><span class="name">GenericMarshallingException</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="MarshallingException.html" class="extype" name="com.spingo.op_rabbit.MarshallingException">MarshallingException</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@GenericMarshallingExceptionextendsMarshallingExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Handler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Handler=(scala.concurrent.Promise[com.spingo.op_rabbit.ReceiveResult],com.spingo.op_rabbit.Delivery)=&gt;Unit"></a>
+      <a id="Handler:Handler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Handler</span><span class="result"> = (<span class="extype" name="scala.concurrent.Promise">Promise</span>[<a href="ReceiveResult.html" class="extype" name="com.spingo.op_rabbit.ReceiveResult">ReceiveResult</a>], <a href="Delivery.html" class="extype" name="com.spingo.op_rabbit.Delivery">Delivery</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Handler=(scala.concurrent.Promise[com.spingo.op_rabbit.ReceiveResult],com.spingo.op_rabbit.Delivery)=&gt;Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.InvalidFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InvalidFormatextendsMarshallingExceptionwithProductwithSerializable"></a>
+      <a id="InvalidFormat:InvalidFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="InvalidFormat.html"><span class="name">InvalidFormat</span></a><span class="params">(<span name="received">received: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="error">error: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="MarshallingException.html" class="extype" name="com.spingo.op_rabbit.MarshallingException">MarshallingException</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@InvalidFormatextendsMarshallingExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  This exception is thrown when a <a href="RabbitUnmarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitUnmarshaller">RabbitUnmarshaller</a> tries to
+  unmarshall a message with the wrong contentType specified in the
+  header.</p>
+    </li><li name="com.spingo.op_rabbit.MarshallingException" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MarshallingExceptionextendsException"></a>
+      <a id="MarshallingException:MarshallingException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MarshallingException.html"><span class="name">MarshallingException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@MarshallingExceptionextendsException" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Message" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MessageextendsMessageForPublicationLike"></a>
+      <a id="Message:Message"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Message.html"><span class="name">Message</span></a><span class="result"> extends <a href="MessageForPublicationLike.html" class="extype" name="com.spingo.op_rabbit.MessageForPublicationLike">MessageForPublicationLike</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@MessageextendsMessageForPublicationLike" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  <b>Confirmed</b> Message container.</p><div class="fullcomment"><div class="comment cmt"><p>  <b>Confirmed</b> Message container. Send to <a href="RabbitControl.html" class="extype" name="com.spingo.op_rabbit.RabbitControl">RabbitControl</a> actor for delivery. Upon delivery confirmation, <a href="RabbitControl.html" class="extype" name="com.spingo.op_rabbit.RabbitControl">RabbitControl</a> will respond to the sender with <code>true</code>.</p><p>  Use the factory method <a href="Message$.html#apply[T](body:T,publisher:com.spingo.op_rabbit.Publisher,properties:Seq[com.spingo.op_rabbit.properties.MessageProperty])(implicitmarshaller:com.spingo.op_rabbit.RabbitMarshaller[T]):M" class="extmbr" name="com.spingo.op_rabbit.Message#apply">Message$.apply</a> to instantiate one of these using an implicit <a href="RabbitMarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitMarshaller">RabbitMarshaller</a> for serialization.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="Message$.html#exchange[T](message:T,exchange:String,routingKey:String,properties:Seq[com.spingo.op_rabbit.properties.MessageProperty])(implicitmarshaller:com.spingo.op_rabbit.RabbitMarshaller[T]):M" class="extmbr" name="com.spingo.op_rabbit.Message#exchange">Message$.exchange</a>, <a href="Message$.html#topic[T](message:T,routingKey:String,exchange:String,properties:Seq[com.spingo.op_rabbit.properties.MessageProperty])(implicitmarshaller:com.spingo.op_rabbit.RabbitMarshaller[T]):M" class="extmbr" name="com.spingo.op_rabbit.Message#topic">Message$.topic</a>, <a href="Message$.html#queue[T](message:T,queue:String,properties:Seq[com.spingo.op_rabbit.properties.MessageProperty])(implicitmarshaller:com.spingo.op_rabbit.RabbitMarshaller[T]):M" class="extmbr" name="com.spingo.op_rabbit.Message#queue">Message$.queue</a></p></span></dd></dl></div>
+    </li><li name="com.spingo.op_rabbit.MessageForPublicationLike" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MessageForPublicationLikeextendscom.rabbitmq.client.Channel=&gt;Unit"></a>
+      <a id="MessageForPublicationLike:MessageForPublicationLike"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MessageForPublicationLike.html"><span class="name">MessageForPublicationLike</span></a><span class="result"> extends (<span class="extype" name="com.rabbitmq.client.Channel">Channel</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@MessageForPublicationLikeextendscom.rabbitmq.client.Channel=&gt;Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Basic interface; send to <a href="RabbitControl.html" class="extype" name="com.spingo.op_rabbit.RabbitControl">RabbitControl</a> actor for delivery.</p>
+    </li><li name="com.spingo.op_rabbit.MismatchedContentType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MismatchedContentTypeextendsMarshallingExceptionwithProductwithSerializable"></a>
+      <a id="MismatchedContentType:MismatchedContentType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MismatchedContentType.html"><span class="name">MismatchedContentType</span></a><span class="params">(<span name="received">received: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="expected">expected: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="MarshallingException.html" class="extype" name="com.spingo.op_rabbit.MarshallingException">MarshallingException</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@MismatchedContentTypeextendsMarshallingExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  This exception is thrown when a <a href="RabbitUnmarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitUnmarshaller">RabbitUnmarshaller</a> tries to
+  unmarshall a message with the wrong contentType specified in the
+  header.</p>
+    </li><li name="com.spingo.op_rabbit.Publisher" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PublisherextendsAnyRef"></a>
+      <a id="Publisher:Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Publisher.html"><span class="name">Publisher</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@PublisherextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitControl" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RabbitControlextendsActorwithActorLoggingwithStash"></a>
+      <a id="RabbitControl:RabbitControl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitControl.html"><span class="name">RabbitControl</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span> with <span class="extype" name="akka.actor.Stash">Stash</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitControlextendsActorwithActorLoggingwithStash" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">RabbitControl is the top-level actor which handles the following:</p><div class="fullcomment"><div class="comment cmt"><h4> Overview </h4><p>RabbitControl is the top-level actor which handles the following:</p><p>- Pull configuration from the rabbitmq config block, and establish connection to RabbitMQ
+- Manage <a href="Subscription.html" class="extype" name="com.spingo.op_rabbit.Subscription">subscriptions</a></p><h4> Messages received </h4><p>RabbitControl accepts the following commands / queries:</p><ul><li><a href="MessageForPublicationLike.html" class="extype" name="com.spingo.op_rabbit.MessageForPublicationLike">MessageForPublicationLike</a> - Publish the given message</li><li><a href="RabbitControl$$SubscriptionCommand.html" class="extype" name="com.spingo.op_rabbit.RabbitControl.SubscriptionCommand">RabbitControl.SubscriptionCommand</a> - <a href="RabbitControl$$Pause$.html" class="extype" name="com.spingo.op_rabbit.RabbitControl.Pause">Pause</a> /
+    <a href="RabbitControl$$Run$.html" class="extype" name="com.spingo.op_rabbit.RabbitControl.Run">Resume</a> all register subscriptions (consumers)</li><li><a href="RabbitControl$$GetConnectionActor$.html" class="extype" name="com.spingo.op_rabbit.RabbitControl.GetConnectionActor">RabbitControl.GetConnectionActor</a> - Return the akka.actor.ActorRef for the
+    <code>akka-rabbitmq</code> ConnectionActor</li><li><a href="Subscription.html" class="extype" name="com.spingo.op_rabbit.Subscription">Subscription</a> - Activate the given subscription; responds with a <a href="SubscriptionRef.html" class="extype" name="com.spingo.op_rabbit.SubscriptionRef">SubscriptionRef</a>
+</li></ul></div></div>
+    </li><li name="com.spingo.op_rabbit.RabbitErrorLogging" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RabbitErrorLoggingextendsAnyRef"></a>
+      <a id="RabbitErrorLogging:RabbitErrorLogging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitErrorLogging.html"><span class="name">RabbitErrorLogging</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitErrorLoggingextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Basic trait for reporting error messages; implement to build your own error reporting strategies to be used with consumers
+</p>
+    </li><li name="com.spingo.op_rabbit.RabbitMarshaller" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RabbitMarshaller[T]extendsAnyRef"></a>
+      <a id="RabbitMarshaller[T]:RabbitMarshaller[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitMarshaller.html"><span class="name">RabbitMarshaller</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitMarshaller[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  This trait is used to serialize messages for publication; it
+  configures a property builder and sets the appropriate headers
+</p><div class="fullcomment"><div class="comment cmt"><p>  This trait is used to serialize messages for publication; it
+  configures a property builder and sets the appropriate headers
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="RabbitUnmarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitUnmarshaller">RabbitUnmarshaller</a>, <a href="UTF8StringMarshaller$.html" class="extype" name="com.spingo.op_rabbit.UTF8StringMarshaller">UTF8StringMarshaller</a>, <a href="BinaryMarshaller$.html" class="extype" name="com.spingo.op_rabbit.BinaryMarshaller">BinaryMarshaller</a></p></span></dd></dl></div>
+    </li><li name="com.spingo.op_rabbit.RabbitUnmarshaller" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RabbitUnmarshaller[T]extendsAnyRef"></a>
+      <a id="RabbitUnmarshaller[T]:RabbitUnmarshaller[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitUnmarshaller.html"><span class="name">RabbitUnmarshaller</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitUnmarshaller[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  This trait is used to deserialize messages from binary format for
+  use in Consumers; it checks and honors the contentType / encoding
+  message headers, as appropriate.</p><div class="fullcomment"><div class="comment cmt"><p>  This trait is used to deserialize messages from binary format for
+  use in Consumers; it checks and honors the contentType / encoding
+  message headers, as appropriate.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="RabbitMarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitMarshaller">RabbitMarshaller</a>, <a href="UTF8StringMarshaller$.html" class="extype" name="com.spingo.op_rabbit.UTF8StringMarshaller">UTF8StringMarshaller</a>, <a href="BinaryMarshaller$.html" class="extype" name="com.spingo.op_rabbit.BinaryMarshaller">BinaryMarshaller</a></p></span></dd></dl></div>
+    </li><li name="com.spingo.op_rabbit.ReceiveResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReceiveResultextendsAnyRef"></a>
+      <a id="ReceiveResult:ReceiveResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReceiveResult.html"><span class="name">ReceiveResult</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@ReceiveResultextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RecoveryStrategy" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RecoveryStrategyextends(String,com.rabbitmq.client.Channel,Throwable)=&gt;com.spingo.op_rabbit.Handler"></a>
+      <a id="RecoveryStrategy:RecoveryStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RecoveryStrategy.html"><span class="name">RecoveryStrategy</span></a><span class="result"> extends (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="com.rabbitmq.client.Channel">Channel</span>, <span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <a href="#Handler=(scala.concurrent.Promise[com.spingo.op_rabbit.ReceiveResult],com.spingo.op_rabbit.Delivery)=&gt;Unit" class="extmbr" name="com.spingo.op_rabbit.Handler">Handler</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RecoveryStrategyextends(String,com.rabbitmq.client.Channel,Throwable)=&gt;com.spingo.op_rabbit.Handler" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Instructs RabbitMQ what to do in the event of a consumer failure, failure being defined as the handler throwing an
+exception, the <code>fail</code> directive being used, or <code>ack(Future.failed(ex))</code> / <code>ack(Failure(ex))</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Instructs RabbitMQ what to do in the event of a consumer failure, failure being defined as the handler throwing an
+exception, the <code>fail</code> directive being used, or <code>ack(Future.failed(ex))</code> / <code>ack(Failure(ex))</code>.</p><p>By contract, RecoveryStrategy accept a queueName, channel, and exception, and return a <a href="#Handler=(scala.concurrent.Promise[com.spingo.op_rabbit.ReceiveResult],com.spingo.op_rabbit.Delivery)=&gt;Unit" class="extmbr" name="com.spingo.op_rabbit.Handler">Handler</a> whose status
+dictates the fate of the recovered message. A RecoveryStratregy should not do any asynchronous work involving the
+provided channel
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.Rejection" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RejectionextendsException"></a>
+      <a id="Rejection:Rejection"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Rejection.html"><span class="name">Rejection</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RejectionextendsException" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.StatusCheckMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StatusCheckMessageextendsMessageForPublicationLike"></a>
+      <a id="StatusCheckMessage:StatusCheckMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StatusCheckMessage.html"><span class="name">StatusCheckMessage</span></a><span class="result"> extends <a href="MessageForPublicationLike.html" class="extype" name="com.spingo.op_rabbit.MessageForPublicationLike">MessageForPublicationLike</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@StatusCheckMessageextendsMessageForPublicationLike" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Send this message to RabbitControl to check the status of our connection to the RabbitMQ broker.</p>
+    </li><li name="com.spingo.op_rabbit.Subscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SubscriptionextendsDirectives"></a>
+      <a id="Subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Subscription.html"><span class="name">Subscription</span></a><span class="result"> extends <a href="Directives.html" class="extype" name="com.spingo.op_rabbit.Directives">Directives</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@SubscriptionextendsDirectives" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  A Subscription contains a full definition for a consumer (channel,
+  binding, handling, error recovery, reportings, etc.)
+  subscription</p><div class="fullcomment"><div class="comment cmt"><p>  A Subscription contains a full definition for a consumer (channel,
+  binding, handling, error recovery, reportings, etc.)
+  subscription</p><p>  This object is sent to <a href="RabbitControl.html" class="extype" name="com.spingo.op_rabbit.RabbitControl">RabbitControl</a> to boot.</p><p>  Example instantiation:</p><p>  Subscription {
+    import Directives._</p><p>    channel(qos = 1) {
+      consume(queue(&quot;such-queue&quot;)) {
+        body(as[String]) { payload =&gt;
+          // do work...
+          ack
+        }
+      }
+    }
+  }
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.SubscriptionRef" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SubscriptionRefextendsAnyRef"></a>
+      <a id="SubscriptionRef:SubscriptionRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SubscriptionRef.html"><span class="name">SubscriptionRef</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@SubscriptionRefextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.TopicMatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TopicMatcherextendsAnyRef"></a>
+      <a id="TopicMatcher:TopicMatcher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TopicMatcher.html"><span class="name">TopicMatcher</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@TopicMatcherextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.TypeHolder" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TypeHolder[T]extendsAnyRef"></a>
+      <a id="TypeHolder[T]:TypeHolder[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeHolder.html"><span class="name">TypeHolder</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@TypeHolder[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="com.spingo.op_rabbit.UnconfirmedMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnconfirmedMessageextendsMessageForPublicationLike"></a>
+      <a id="UnconfirmedMessage:UnconfirmedMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UnconfirmedMessage.html"><span class="name">UnconfirmedMessage</span></a><span class="result"> extends <a href="MessageForPublicationLike.html" class="extype" name="com.spingo.op_rabbit.MessageForPublicationLike">MessageForPublicationLike</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@UnconfirmedMessageextendsMessageForPublicationLike" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.spingo.op_rabbit.AirbrakeLogger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AirbrakeLogger"></a>
+      <a id="AirbrakeLogger:AirbrakeLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AirbrakeLogger$.html"><span class="name">AirbrakeLogger</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@AirbrakeLogger" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="AirbrakeLogger.html" class="extype" name="com.spingo.op_rabbit.AirbrakeLogger">AirbrakeLogger</a></p></span></dd></dl></div>
+    </li><li name="com.spingo.op_rabbit.BinaryMarshaller" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BinaryMarshaller"></a>
+      <a id="BinaryMarshaller:BinaryMarshaller"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BinaryMarshaller$.html"><span class="name">BinaryMarshaller</span></a><span class="result"> extends <a href="RabbitMarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitMarshaller">RabbitMarshaller</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]] with <a href="RabbitUnmarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitUnmarshaller">RabbitUnmarshaller</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@BinaryMarshaller" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Pull binary message payload raw, without any serialization.</p><div class="fullcomment"><div class="comment cmt"><p>  Pull binary message payload raw, without any serialization. An implicit is defined in <a href="RabbitUnmarshaller$.html#binaryUnmarshaller:com.spingo.op_rabbit.RabbitUnmarshaller[Array[Byte]]" class="extmbr" name="com.spingo.op_rabbit.RabbitUnmarshaller#binaryUnmarshaller">RabbitUnmarshaller$.binaryUnmarshaller</a> and <a href="RabbitMarshaller$.html#binaryUnmarshaller:com.spingo.op_rabbit.RabbitMarshaller[Array[Byte]]" class="extmbr" name="com.spingo.op_rabbit.RabbitMarshaller#binaryUnmarshaller">RabbitMarshaller$.binaryUnmarshaller</a>
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.Binding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Binding"></a>
+      <a id="Binding:Binding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Binding$.html"><span class="name">Binding</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Binding" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.CirceSupport" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CirceSupport"></a>
+      <a id="CirceSupport:CirceSupport"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CirceSupport$.html"><span class="name">CirceSupport</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@CirceSupport" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.ConnectionParams" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConnectionParams"></a>
+      <a id="ConnectionParams:ConnectionParams"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ConnectionParams$.html"><span class="name">ConnectionParams</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@ConnectionParams" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Deserializer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Deserializer"></a>
+      <a id="Deserializer:Deserializer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Deserializer$.html"><span class="name">Deserializer</span></a><span class="result"> extends <span class="extype" name="com.spingo.op_rabbit.DeserializerLowerPriorityImplicits">DeserializerLowerPriorityImplicits</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Deserializer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Directive" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Directive"></a>
+      <a id="Directive:Directive"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Directive$.html"><span class="name">Directive</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Directive" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Directives" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Directives"></a>
+      <a id="Directives:Directives"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Directives$.html"><span class="name">Directives</span></a><span class="result"> extends <a href="Directives.html" class="extype" name="com.spingo.op_rabbit.Directives">Directives</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Directives" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Convenience object and recommended way for bringing the directives in scope.</p><div class="fullcomment"><div class="comment cmt"><p>  Convenience object and recommended way for bringing the directives in scope. See <a href="Directives.html" class="extype" name="com.spingo.op_rabbit.Directives">Directives</a> trait.
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.Exchange" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Exchange"></a>
+      <a id="Exchange:Exchange"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Exchange$.html"><span class="name">Exchange</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Exchange" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Json4sSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Json4sSupport"></a>
+      <a id="Json4sSupport:Json4sSupport"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Json4sSupport$.html"><span class="name">Json4sSupport</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Json4sSupport" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  To use this package, you must add <code>'op-rabbit-json4s'</code> to your dependencies.</p><div class="fullcomment"><div class="comment cmt"><h4> BATTERIES NOT INCLUDED </h4><p>  To use this package, you must add <code>'op-rabbit-json4s'</code> to your dependencies.</p><h4> Using </h4><p>  If using <code>json4s-native</code>, <code>import Json4sSupport.native._</code></p><p>  If using <code>json4s-jackson</code>, <code>import Json4sSupport.jackson._</code>
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.Message" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Message"></a>
+      <a id="Message:Message"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Message$.html"><span class="name">Message</span></a><span class="result"> extends <span class="extype" name="com.spingo.op_rabbit.MessageFactory">MessageFactory</span>[<a href="Message.html" class="extype" name="com.spingo.op_rabbit.Message">Message</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Message" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  <b>Confirmed</b> message generator.</p><div class="fullcomment"><div class="comment cmt"><p>  <b>Confirmed</b> message generator. See <a href="Message$.html" class="extype" name="com.spingo.op_rabbit.Message">Message$</a>
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.MessageForPublicationLike" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MessageForPublicationLike"></a>
+      <a id="MessageForPublicationLike:MessageForPublicationLike"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MessageForPublicationLike$.html"><span class="name">MessageForPublicationLike</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@MessageForPublicationLike" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.ModeledConsumerArgs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ModeledConsumerArgs"></a>
+      <a id="ModeledConsumerArgs:ModeledConsumerArgs"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ModeledConsumerArgs$.html"><span class="name">ModeledConsumerArgs</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@ModeledConsumerArgs" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.ModeledMessageHeaders" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ModeledMessageHeaders"></a>
+      <a id="ModeledMessageHeaders:ModeledMessageHeaders"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ModeledMessageHeaders$.html"><span class="name">ModeledMessageHeaders</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@ModeledMessageHeaders" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.PlayJsonSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PlayJsonSupport"></a>
+      <a id="PlayJsonSupport:PlayJsonSupport"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PlayJsonSupport$.html"><span class="name">PlayJsonSupport</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@PlayJsonSupport" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  To use this package, you must add <code>'op-rabbit-play-json'</code> to your dependencies.</p><div class="fullcomment"><div class="comment cmt"><h4> BATTERIES NOT INCLUDED </h4><p>  To use this package, you must add <code>'op-rabbit-play-json'</code> to your dependencies.</p><h4> Overview </h4><p>  Use implicit PlayJson formats for serialization by importing this object.</p><p>  Example:</p><pre><span class="kw">import</span> play.api.libs.json._
+<span class="kw">import</span> com.spingo.op_rabbit.PlayJsonSupport._
+
+<span class="kw">object</span> Example {
+  <span class="kw">case</span> <span class="kw">class</span> Person(name: <span class="std">String</span>, age: <span class="std">Int</span>)
+  <span class="kw">implicit</span> <span class="kw">val</span> format = Json.format[Person]
+  <span class="cmt">// Both of these can be implicitly created:</span>
+  <span class="cmt">// - implicitly[RabbitMarshaller[Person]]</span>
+  <span class="cmt">// - implicitly[RabbitUnmarshaller[Person]]</span>
+  <span class="kw">val</span> consumer = AsyncAckingConsumer[Person](<span class="lit">"PurplePeopleEater"</span>) { person <span class="kw">=&gt;</span>
+    Future { eat(person) }
+  }
+  <span class="kw">val</span> message = QueueMessage(Person(<span class="lit">"Bill"</span>, <span class="num">25</span>), <span class="lit">"people-for-consumption"</span>)
+}</pre></div></div>
+    </li><li name="com.spingo.op_rabbit.Publisher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Publisher"></a>
+      <a id="Publisher:Publisher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Publisher$.html"><span class="name">Publisher</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Publisher" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Queue"></a>
+      <a id="Queue:Queue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Queue$.html"><span class="name">Queue</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Queue" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RabbitConfig"></a>
+      <a id="RabbitConfig:RabbitConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitConfig$.html"><span class="name">RabbitConfig</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitConfig" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitControl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RabbitControl"></a>
+      <a id="RabbitControl:RabbitControl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitControl$.html"><span class="name">RabbitControl</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitControl" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitErrorLogging" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RabbitErrorLogging"></a>
+      <a id="RabbitErrorLogging:RabbitErrorLogging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitErrorLogging$.html"><span class="name">RabbitErrorLogging</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitErrorLogging" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitExceptionMatchers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RabbitExceptionMatchers"></a>
+      <a id="RabbitExceptionMatchers:RabbitExceptionMatchers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitExceptionMatchers$.html"><span class="name">RabbitExceptionMatchers</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitExceptionMatchers" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitHelpers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RabbitHelpers"></a>
+      <a id="RabbitHelpers:RabbitHelpers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitHelpers$.html"><span class="name">RabbitHelpers</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitHelpers" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitMarshaller" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RabbitMarshaller"></a>
+      <a id="RabbitMarshaller:RabbitMarshaller"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitMarshaller$.html"><span class="name">RabbitMarshaller</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitMarshaller" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RabbitUnmarshaller" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RabbitUnmarshaller"></a>
+      <a id="RabbitUnmarshaller:RabbitUnmarshaller"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RabbitUnmarshaller$.html"><span class="name">RabbitUnmarshaller</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RabbitUnmarshaller" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.ReceiveResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReceiveResult"></a>
+      <a id="ReceiveResult:ReceiveResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReceiveResult$.html"><span class="name">ReceiveResult</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@ReceiveResult" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.RecoveryStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RecoveryStrategy"></a>
+      <a id="RecoveryStrategy:RecoveryStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RecoveryStrategy$.html"><span class="name">RecoveryStrategy</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@RecoveryStrategy" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Rejection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Rejection"></a>
+      <a id="Rejection:Rejection"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Rejection$.html"><span class="name">Rejection</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Rejection" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Slf4jLogger" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Slf4jLogger"></a>
+      <a id="Slf4jLogger:Slf4jLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Slf4jLogger$.html"><span class="name">Slf4jLogger</span></a><span class="result"> extends <a href="RabbitErrorLogging.html" class="extype" name="com.spingo.op_rabbit.RabbitErrorLogging">RabbitErrorLogging</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Slf4jLogger" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Reports consumer errors to Slf4j.</p>
+    </li><li name="com.spingo.op_rabbit.SprayJsonSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SprayJsonSupport"></a>
+      <a id="SprayJsonSupport:SprayJsonSupport"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SprayJsonSupport$.html"><span class="name">SprayJsonSupport</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@SprayJsonSupport" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  To use this package, you must add <code>'op-rabbit-spray-json'</code> to your dependencies.</p><div class="fullcomment"><div class="comment cmt"><h4> BATTERIES NOT INCLUDED </h4><p>  To use this package, you must add <code>'op-rabbit-spray-json'</code> to your dependencies.</p><h4> Overview </h4><p>  Use implicit SprayJson formats for serialization by importing this object.</p><p>  Example:</p><pre><span class="kw">import</span> spray.json.DefaultJsonProtocol
+<span class="kw">import</span> com.spingo.op_rabbit.SprayJsonSupport._
+
+<span class="kw">object</span> Example <span class="kw">extends</span> DefaultJsonProtocol {
+  <span class="kw">case</span> <span class="kw">class</span> Person(name: <span class="std">String</span>, age: <span class="std">Int</span>)
+  <span class="kw">implicit</span> <span class="kw">val</span> format = jsonFormat2(Person)
+  <span class="cmt">// Both of these can be implicitly created:</span>
+  <span class="cmt">// - implicitly[RabbitMarshaller[Person]]</span>
+  <span class="cmt">// - implicitly[RabbitUnmarshaller[Person]]</span>
+  <span class="kw">val</span> consumer = AsyncAckingConsumer[Person](<span class="lit">"PurplePeopleEater"</span>) { person <span class="kw">=&gt;</span>
+    Future { eat(person) }
+  }
+  <span class="kw">val</span> message = QueueMessage(Person(<span class="lit">"Bill"</span>, <span class="num">25</span>), <span class="lit">"people-for-consumption"</span>)
+}</pre></div></div>
+    </li><li name="com.spingo.op_rabbit.StatusCheckMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StatusCheckMessage"></a>
+      <a id="StatusCheckMessage:StatusCheckMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StatusCheckMessage$.html"><span class="name">StatusCheckMessage</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@StatusCheckMessage" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.Subscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Subscription"></a>
+      <a id="Subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Subscription$.html"><span class="name">Subscription</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@Subscription" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.SubscriptionActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SubscriptionActor"></a>
+      <a id="SubscriptionActor:SubscriptionActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SubscriptionActor$.html"><span class="name">SubscriptionActor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@SubscriptionActor" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.TopicMatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TopicMatcher"></a>
+      <a id="TopicMatcher:TopicMatcher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TopicMatcher$.html"><span class="name">TopicMatcher</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@TopicMatcher" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.TypeHolder" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TypeHolder"></a>
+      <a id="TypeHolder:TypeHolder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeHolder$.html"><span class="name">TypeHolder</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@TypeHolder" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="com.spingo.op_rabbit.UTF8StringMarshaller" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UTF8StringMarshaller"></a>
+      <a id="UTF8StringMarshaller:UTF8StringMarshaller"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UTF8StringMarshaller$.html"><span class="name">UTF8StringMarshaller</span></a><span class="result"> extends <a href="RabbitMarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitMarshaller">RabbitMarshaller</a>[<span class="extype" name="scala.Predef.String">String</span>] with <a href="RabbitUnmarshaller.html" class="extype" name="com.spingo.op_rabbit.RabbitUnmarshaller">RabbitUnmarshaller</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@UTF8StringMarshaller" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  Converts binary message to a UTF8 string, and back.</p><div class="fullcomment"><div class="comment cmt"><p>  Converts binary message to a UTF8 string, and back. An implicit is defined in <a href="RabbitUnmarshaller$.html#stringMarshaller:com.spingo.op_rabbit.RabbitUnmarshaller[String]" class="extmbr" name="com.spingo.op_rabbit.RabbitUnmarshaller#stringMarshaller">RabbitUnmarshaller$.stringMarshaller</a> and <a href="RabbitMarshaller$.html#stringMarshaller:com.spingo.op_rabbit.RabbitMarshaller[String]" class="extmbr" name="com.spingo.op_rabbit.RabbitMarshaller#stringMarshaller">RabbitMarshaller$.stringMarshaller</a>
+</p></div></div>
+    </li><li name="com.spingo.op_rabbit.UnconfirmedMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnconfirmedMessage"></a>
+      <a id="UnconfirmedMessage:UnconfirmedMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UnconfirmedMessage$.html"><span class="name">UnconfirmedMessage</span></a><span class="result"> extends <span class="extype" name="com.spingo.op_rabbit.MessageFactory">MessageFactory</span>[<a href="UnconfirmedMessage.html" class="extype" name="com.spingo.op_rabbit.UnconfirmedMessage">UnconfirmedMessage</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@UnconfirmedMessage" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit#futureUnit" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="futureUnit:scala.concurrent.Future[Unit]"></a>
+      <a id="futureUnit:Future[Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">futureUnit</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@futureUnit:scala.concurrent.Future[Unit]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="com.spingo.op_rabbit.properties" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="properties"></a>
+      <a id="properties:properties"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="properties/package.html"><span class="name">properties</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@properties" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.spingo.op_rabbit.stream" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stream"></a>
+      <a id="stream:stream"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="stream/package.html"><span class="name">stream</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@stream" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">  To use this package, you must add <code>'op-rabbit-akka-stream'</code> to your dependencies.</p><div class="fullcomment"><div class="comment cmt"><h4> Batteries not included </h4><p>  To use this package, you must add <code>'op-rabbit-akka-stream'</code> to your dependencies.</p><h4> Overview </h4></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="https://github.com/SpinGo/op-rabbit/tree/master/addons/akka-stream/src/test/scala/com/spingo/op_rabbit" target="_blank">Akka Stream Specs on GitHub</a></p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="com.spingo.op_rabbit.LogbackLogger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LogbackLogger"></a>
+      <a id="LogbackLogger:LogbackLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LogbackLogger$.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.2) LogbackLogger has been renamed to Slf4jLogger">LogbackLogger</span></a><span class="result"> extends <a href="RabbitErrorLogging.html" class="extype" name="com.spingo.op_rabbit.RabbitErrorLogging">RabbitErrorLogging</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#com.spingo.op_rabbit.package@LogbackLogger" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.2)</i> LogbackLogger has been renamed to Slf4jLogger</p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
